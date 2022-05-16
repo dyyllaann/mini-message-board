@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}!
+  br
+
+  each val in messages
+    h2= val.user
+    p= val.added
+    h3= val.text
+    br
+
+  a(href="/new") Add message
